@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+ <html> 
+    <head>
+         <title> Course Registation Form </title>
+          <style> body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+                 
+                 .centered {
+        
+                     color: #333;
+                    text-align: center;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-size: 36px;
+                    color: #333; 
+                    text-shadow: 2px 2px 4px rgba(47, 208, 219, 0.5); 
+                         }
+
+                .heading {
+                     margin-top: 50px;
+                     }
+    
+                form { 
+                    background-image: url('https://tse1.mm.bing.net/th?id=OIP.PulI1PRmHP73-yFxOjj6FwHaFk&pid=Api&P=0&h=220');
+                    background-size: cover;
+                    background-position: center;
+                    background-color: #FAFAFA;
+                    opacity: 0.9;
+                    max-width: 600px;
+                    margin: 0 auto;
+                    padding: 2rem;
+                    border-radius: 5px;
+                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                     margin: 20px auto;
+                     width: 50%; 
+                     border: 1px solid #ddd; 
+
+                     }
+    
+                 table { width: 100%; 
+                    border-collapse: collapse; 
+                        }
+    
+                td { padding: 10px; }
+    
+                 input[type="text"], input[type="date"], select { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+    
+                label { display: block; margin-bottom: 5px; font-size: 14px; color: #666; }
+    
+                select { appearance: none; -webkit-appearance: none; -moz-appearance: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.657 6.586 4.293 7.95l.707.707L10 13.757z'/></svg>"), linear-gradient(#f9f9f9, #f9f9f9), radial-gradient(#ebebeb, #ebebeb); background-position: right .7em top 50%, 100% 50%, 100% 0; background-size: 1.5em auto, 100% 1.5em, 2.5em 2.5em; background-repeat: no-repeat; padding: .5em .7em .5em 2em; border: 1px solid #ccc; border-radius: .25em; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+    
+                input[type="submit"] { background-color: #333; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+    
+                input[type="submit"]:hover { background-color: #444; } </style>
+    
+    </head>
+     <body> 
+        <div>
+            <h1 class="centered heading">Course Registation</h1>
+            <div>
+                <form>
+                    <table>
+                        <tr>
+                            <td><h2>Student Name:</h2></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="FNtf"/></td>
+                            <td><input type="text" id="MNtf"/></td>
+                            <td><input type="text" id="LNtf"/></td>
+                        </tr> 
+                        <tr> 
+                            <td><center><p>First Name</p></center></td> 
+                            <td><center><p>Middle Name</p></center></td> 
+                            <td><center><p>Last Name</p></center></td> 
+                        </tr> 
+                        <tr> 
+                            <td><h2>Birth Date:</h2></td> 
+                            <td> 
+                                <input type="date" id="birthday" name="birthday" value="yyyy-mm-dd" min="1900-01-01" max="2024-12-31">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><h2>Address :</h2></td>
+                        </tr>
+                        <tr colspan="2" size="100%">
+                            <td>
+                                    <input type="text" id="SAtf" />
+                                    <label><center>Street Address</center></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="SAL2tf"/>
+                                <label><center>Street Address Line 2</center></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="Ptf"/>
+                                <label><center>State / Privince</center></label>
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="text" id="PCtf"/>
+                                <label><center>Postal Code</center></label>
+                            </td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="Emailtf"/>
+                                <label><center>Email</center></label>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                                <input type="text" id="PNtf"/>
+                                <label><center>Mobile Number</center></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Educatio Level</td>
+                            <td></td>
+                            <td>Course</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select id="EDUL" name="education">
+                                    <option value="ol">GCE O/l</option>
+                                    <option value="al">GCE A/L</option>
+                                    <option value="dp">Diploma</option>
+                                    <option value="nvq">NVQ certificate</option>
+                                    <option>Certificates and Professional Certifications</option>
+                                    <option>Associate's Degree or Diploma in Web Development</option>
+                                </select>  
+                            </td>
+                            <td></td> 
+                            <td><select id="course" name="course">
+                                <option value="nmc">BIT(hons)network and mobile Computing in </option>
+                                <option value="bit">Bachelor of Science in Computer Science</option>
+                                <option value="it">Bachelor of Science in Artificial Intelligence</option>
+                                <option>Bachelor of Science in Information Technology</option>
+                                <option>Bachelor of Science in Software Engineering</option>
+                                <option>Bachelor of Science in Cybersecurity</option>
+                                <option>Bachelor of Science in Digital Media Technology</option>
+                                <option>Bachelor of Science in User Experience (UX) Design</option>
+                                <option>Bachelor of Science in Cloud Computing</option>
+                            </select></td>
+                        </tr>
+                        <tr aria-colspan="2">
+                            <td>
+                                <label><h3>Additional Comment</h3></label>
+                                <input type="text" id="comment"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" id="sub"/></td>
+                        </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

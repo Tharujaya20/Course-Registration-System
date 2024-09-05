@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    form {
+        background-image: url('https://tse1.mm.bing.net/th?id=OIP.V7igWk5ny4YyZekozm9zewHaF7&pid=Api&P=0&h=220');
+        background-size: cover;
+        background-position: center;
+        background-color: #FAFAFA;
+        opacity: 0.9;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px; 
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+
+    input[type="submit"], input[type="reset"] {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover, input[type="reset"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+    <form onsubmit="return validateForm()">
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname" placeholder="Enter your first name">
+    <br/>
+
+    <label for="lname">Surname:</label>
+    <input type="text" id="lname" name="lname" placeholder="Enter your surname">
+    <br/>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email">
+    <br/>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+    <br/>
+
+    <label for="pwd">Password:</label>
+    <input type="password" id="pwd" name="pwd" placeholder="Enter your password">
+    <br/>
+
+    <label for="re-pwd">Re-type Password:</label>
+    <input type="password" id="re-pwd" name="re-pwd" placeholder="Re-type your password">
+    <br/>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+    <br/>
+</form>
+
+<script>
+    function validateForm() {
+        var fname = document.forms["registration"]["fname"].value;
+        var lname = document.forms["registration"]["lname"].value;
+        var email = document.forms["registration"]["email"].value;
+        var phone = document.forms["registration"]["phone"].value;
+        var pwd = document.forms["registration"]["pwd"].value;
+        var re_pwd = document.forms["registration"]["re-pwd"].value;
+
+        if (fname == "" || lname == "" || email == "" || phone == "" || pwd == "" || re_pwd == "") {
+            alert("All fields must be filled out.");
+            return false;
+        }
+
+        if (pwd != re_pwd) {
+            alert("Passwords do not match.");
+            return false;
+        }
+
+        var reEmail = /\S+@\S+\.\S+/;
+        if (!reEmail.test(email)) {
+            alert("Invalid email address.");
+            return false;
+        }
+
+        var rePhone = /^[0-9]{10}$/;
+        if (!rePhone.test(phone)) {
+            alert("Invalid phone number.");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+</body>
+</html>
